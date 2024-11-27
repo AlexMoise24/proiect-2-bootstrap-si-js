@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css" />
+    <script
+      src="https://kit.fontawesome.com/ad7139f3a1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- header -->
+    <div class="navSection">
+      <a class="navbar-brand" href="/index.html">IT&C Market</a>
+    </div>
+
+    <form
+      clas="contact"
+      id="registrationForm"
+      onsubmit="saveData(event); sendEmail(); reset(); return false"
+    >
+      <label for="firstName">Prenume:</label>
+      <input
+        type="text"
+        id="firstName"
+        name="firstName"
+        required
+        maxlength="20"
+      />
+
+      <label for="lastName">Nume:</label>
+      <input
+        type="text"
+        id="lastName"
+        name="lastName"
+        required
+        maxlength="20"
+      />
+
+      <label for="telefon">Telefon:</label>
+      <input type="text" id="telefon" name="telefon" required maxlength="10" />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="mesaj">Mesaj:</label>
+      <textarea name="mesaj" id="mesaj" rows="10" cols="38" required></textarea>
+
+      <button type="submit">Trimite</button>
+    </form>
+    <div class="userDisplay">
+      <div id="usersList">
+        <!-- Aici vor apărea utilizatorii -->
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="contact.js"></script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: #f4f4f4;
+    width: 80%;
+  }
+  .pageTitle {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    padding: 20px;
+  }
+  .navSection {
+    background-color: #343a40;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .navSection a {
+    text-decoration: none;
+    color: white;
+    padding: 15px auto;
+    margin-left: 15px;
+  }
+  #registrationForm{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+  }
+
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  input {
+    padding: 8px;
+    margin-top: 5px;
+    width: 100%;
+    max-width: 300px;
+  }
+  button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #343a40;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #636a71;
+  }
+  .userDisplay {
+    display: flex;
+    margin: 15px;
+   flex-direction: column;
+   gap: 15px;
+  }
+
+  #usersList {
+    margin-bottom: 10px;
+    display: grid;
+    border-radius: 5px;
+    grid-template-columns: 
+     1fr 1fr 1fr;
+    padding: 15px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  #usersList p:last-child{
+    margin-bottom: 15px;
+  }
+
+  .userDiv{
+   border-radius: 5px;
+    border: 1px solid #343a40;
+    padding: 15px;
+    margin-bottom: 5px;
+    min-width: 250px;
+    min-height: 150px;
+    box-shadow: 5px 5px 10px #636a71;
+  }
+
+  @media (max-width: 768px) {
+    #usersList {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }

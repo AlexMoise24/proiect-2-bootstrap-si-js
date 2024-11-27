@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background-color: #f4f4f4;
+  width: 80%;
+}
+.pageTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 20px;
+}
+.navSection {
+  background-color: #343a40;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navSection a {
+  text-decoration: none;
+  color: white;
+  padding: 15px auto;
+  margin-left: 15px;
+}
+
+.allContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  gap: 20px;
+}
+.fotoSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 450px;
+}
+
+.mainImg {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+.fotoDetail {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.fotoDetail img {
+  display: flex;
+  width: 30%;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.fotoDetail img:hover {
+  /* border: 1px solid red; */
+  opacity: 0.2;
+}
+.detailSection {
+  padding: 15px;
+  position: relative;
+  top: 50px;
+}
+
+.detailSection h3 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-wrap: nowrap;
+  margin-bottom: 15px;
+}
+
+.detailSection p {
+  font-size: 1.2rem;
+  font-weight: 200;
+  /* text-wrap: nowrap; */
+  margin-bottom: 25px;
+  color: #343a40;
+}
+
+.specifProd {
+  margin-top: 25px;
+  border-top: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.specifProd h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 15px;
+}
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+.prezentareSection {
+  margin-top: 25px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #343a40;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+.prezentareSection img {
+  opacity: 0.4;
+  transition-duration: 2s;
+  width: 100%;
+  border-radius: 5px;
+}
+.prezentareSection img:hover {
+  opacity: 1;
+}
+
+@media (max-width: 950px) {
+  .allContent {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.active {
+  border-color: red !important;
+}

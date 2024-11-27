@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio</title>
+    <link rel="stylesheet" href="detalii.css" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+  </head>
+  <body>
+    <!-- nav section -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html">IT&C Market</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarsExample03"
+        aria-controls="navbarsExample03"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample03">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a
+              style="color: white"
+              class="nav-link dropdown-toggle"
+              href="/produse.html"
+              id="dropdown03"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >PRODUSE</a
+            >
+            <div
+              class="dropdown-menu category-menu"
+              aria-labelledby="dropdown05"
+              style="background-color: #343a40; border: none"
+            >
+              <a
+                onclick="filterByCategory('all')"
+                class="dropdown-item"
+                href="test.html"
+                style="color: white"
+                id="drItem"
+                >Toate categoriile</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="continutPagina">
+      <!-- Containerul cu produse -->
+      <div class="products-container">
+       
+
+        <div class="product-card produs" id="produs1" data-category="audio">
+            <img src="/media/audio 1/1.jpg" alt="Home Cinema Samsung" />
+            <h3 style="font-size: 1rem">Home Cinema Samsung</h3>
+            <p>850 RON</p>
+            <button
+              onclick="addToCart('produs1', 'Home Cinema Samsung', 850, '/media/audio 1/1.jpg')"
+            >
+              Adaugă în coș
+            </button>
+            <button class="infoProdus">
+              <a href="./produse/indexprod2.html">Detalii</a>
+            </button>
+          </div>
+
+        <div class="product-card produs" id="produs6" data-category="audio">
+            <img src="/media/audio 2/1.jpg" alt="Media-player Apple TV HD" />
+            <h3 style="font-size: 1rem">Media-player Apple TV HD</h3>
+            <p>1950 RON</p>
+            <button
+              onclick="addToCart('produs6', 'Media-player Apple TV HD', 1950, '/media/audio 2/1.jpg')"
+            >
+              Adaugă în coș
+            </button>
+            <button class="infoProdus"><a href="/laptop.html">Detalii</a></button>
+          </div>
+
+        <div class="product-card produs" id="produs11" data-category="audio">
+            <img src="/media/audio 3/1.jpg" alt="Sistem Home Cinema 5.1 JBL" />
+            <h3 style="font-size: 1rem">Sistem Home Cinema 5.1 JBL</h3>
+            <p>2800 RON</p>
+            <button
+              onclick="addToCart('produs11', 'Sistem Home Cinema 5.1 JBL', 2800, '/media/audio 3/1.jpg')"
+            >
+              Adaugă în coș
+            </button>
+            <button class="infoProdus"><a href="/laptop.html">Detalii</a></button>
+          </div>
+
+        <div class="product-card produs" id="produs13" data-category="audio">
+            <img src="/media/audio 4/1.jpg" alt="Sistem Home Cinema Sony" />
+            <h3 style="font-size: 1rem">Sistem Home Cinema SonyL</h3>
+            <p>3200 RON</p>
+            <button
+              onclick="addToCart('produs13', 'Sistem Home Cinema Sony', 3200, '/media/audio 4/1.jpg')"
+            >
+              Adaugă în coș
+            </button>
+            <button class="infoProdus"><a href="/laptop.html">Detalii</a></button>
+          </div>
+      </div>
+
+      <!-- Coșul de cumpărături -->
+      <div class="cart-container" id="cart">
+        <h2 style="font-size: 1.5rem">Coșul meu de cumpărături</h2>
+        <div id="cartItems"></div>
+        <div id="cartTotal">
+          <h3 style="font-size: 1.2rem">
+            Total: <span id="totalAmount">0</span> RON
+          </h3>
+        </div>
+        <!-- Butonul de finalizare a comenzii -->
+        <button id="checkoutButton" onclick="checkout()">
+          Finalizează comanda
+        </button>
+      </div>
+    </div>
+    <!-- Mesajul de confirmare -->
+    <div id="confirmationMessage"></div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="test.js"></script>
+    <script src="/js/jquery-3.5.0slim.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
